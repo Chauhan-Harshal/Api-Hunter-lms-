@@ -1,0 +1,215 @@
+/* Membership badge default */
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+/* 🎨 Different badge colors */
+.badge.student {
+  background-color:#7d5a08;
+  color: white;
+}
+
+/* Remove default button look */
+.btn {
+  all: unset;
+  width: 80%;
+  margin-left: 16%;
+  display: block;
+  /* background-color: #28a745; */
+}/* Reset list styling */
+.ol-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each member row */
+
+/* Hover effect */
+.list-group-item:hover {
+background-color: #f5deb3 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Member name + ID */
+.list-group-item .fw-bold {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Email text */
+.list-group-item .ms-2 {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Membership badge default */
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Title */
+.container h1  {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #7d5a08;
+}
+
+/* List Items */
+.list-group-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+  padding: 12px 15px;
+}
+
+
+/* Button inside list */
+.list-group-item .btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Member info inside list */
+.list-group-item .fw-bold {
+  font-size: 16px;
+}
+
+.list-group-item small {
+  color: #555;
+}
+
+/* Badge styling */
+.list-group-item .badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  background-color: #9c6c23;
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 12px;  
+  padding: 20px;
+  background-color: #f5deb3 !important;
+  margin: auto;
+}
+
+.modal-header {
+  border-bottom: none;
+  background: #7d5a08;
+}
+
+.modal-title {
+  font-size: 20px;
+  color:#7d5a08;
+}
+
+ .modal-dialog {
+  display: flex;
+  align-items: center;         
+  min-height: 100vh;  
+  margin: auto;
+  background-color: #7d5a08;
+  
+}
+.modal-body
+{
+  background-color: #f5deb3 !important;
+}
+
+.modal-body p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* Modal profile image */
+.modal-body img {
+  border: 3px solid #054181;
+}
+
+/* Close button */
+.btn-close {
+  color: #f1ecec;
+  border-radius: 50%;
+}
+
+.btn-close:hover {
+ 
+ color: hsl(0, 0%, 100%);
+}
+
+/* Modal footer buttons */
+.modal-footer .btn-secondary {
+  background-color: #7d5a08;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #ae3505;
+}
+/* Modal Animation */
+
+
+/* Apply animation to modal when it opens */
+.modal.fade .modal-dialog {
+  animation: modalFadeIn 0.4s ease forwards;
+}
+
+.list-group-item:hover {
+  transform: translateX(5px);
+  transition: all 0.2s ease;
+}
+/* Search + filters inline */
+.search-filters input,
+.search-filters select {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Modal member info vertical */
+.member-details-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* vertical spacing */
+}
+
+.member-info-line {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  align-items: flex-start; /* left align text */
+  gap: 6px; /* spacing between each line */
+  width: 100%;
+  text-align: left;
+}
+.modal-title{
+  color: #fefafa;
+}

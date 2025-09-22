@@ -1,0 +1,81 @@
+.addbook {
+  overflow: hidden;
+  height: 500px;
+  padding: 50px;
+    background-color: rgb(215, 220, 163);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+}
+.addbook h1
+{
+ width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    margin-left: 7%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  width: 70%;
+  margin-left: 30%;
+}
+
+.form-group label {
+  margin: 10px 5px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-control {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+#availability {
+  margin-left: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.row .addbookbtn {
+  background-color: #b29505;
+  height: 40px;
+  line-height: 20px;
+  width: 250px;
+  margin: 25px auto;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+}
+
+.row .addbookbtn:hover {
+  background-color: rgb(64, 174, 123);
+  border: 3px solid #edf2f7;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .addbook {
+    padding: 20px;
+  }
+
+  .addbook h2 {
+    font-size: 1.5rem;
+  }
+}

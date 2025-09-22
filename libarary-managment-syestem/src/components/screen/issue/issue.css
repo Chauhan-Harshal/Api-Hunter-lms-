@@ -1,0 +1,99 @@
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: pink;
+}
+
+.issue-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.issue-form select,
+.issue-form input[type="text"],
+.issue-form input[type="date"] {
+  padding: 8px;
+}
+
+.issue-form button {
+  padding: 10px;
+  background-color: #f5deb3 !important;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-search {
+  position: relative;
+}
+
+.book-search ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.book-search li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.issued-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.issued-table th,
+.issued-table td {
+  padding: 8px;
+}
+
+.issued-table th {
+  border-bottom: 1px solid #ccc;
+}
+
+.issued-table tr {
+  border-bottom: 1px solid #eee;
+}
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}

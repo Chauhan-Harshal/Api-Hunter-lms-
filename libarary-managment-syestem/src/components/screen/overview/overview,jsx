@@ -1,0 +1,79 @@
+
+ import { useEffect, useState } from "react";
+ import axios from "axios";
+ import "./Overview.css";
+ import { RiBookShelfFill, RiGroup3Fill, RiBook2Fill, RiMoneyDollarCircleFill,  RiCalendarCheckFill} from "@remixicon/react";
+import RoundChart from "./RoundChart";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBooks } from "../../features/bookSlice";
+import { fetchMembers } from "../../features/membersSlice";
+import PopularityChart from "./PopularityChart";
+
+export default function Overview() {
+   const [issued, setIssued] = useState([]);
+  const [fines, setFines] = useState([]);
+const [reservations, setReservations] = useState([]);
+
+
+ const { books } = useSelector((state) => state.books);
+const members = useSelector((state) => state.members.members)
+
+ const dispatch = useDispatch()
+
+   useEffect(() => {
+    // dispatch fetchbook 
+     dispatch(fetchBooks());
+    // dispatch fetchMembers
+    dispatch(fetchMembers())
+   
+     axios.get("http://localhost:3000/issue").then((res) =>
+      setIssued(res.data)
+    );
+     axios.get("http://localhost:3000/fines").then((res) => setFines(res.data));
+       axios.get("http://localhost:3000/reservations").then((res) => setReservations(res.data));
+ }, []);
+
+ return (
+    <div className="Overview">
+      <div className="Overview_con">
+      <div className="box">
+        
+        <h2>{books.length}</h2>
+         <h3>Total Books</h3>
+      </div>
+      <div className="box">
+   
+        <h2>{members.length}</h2>
+        <h3>Total Members </h3>
+      </div>
+       <div className="box">
+        
+
+        <h2>{issued.length}</h2>
+       <h3>Issued Books</h3>
+       </div>
+      <div className="box">
+
+      <h2>{fines.length}</h2>
+       <h3>Fines</h3>
+       </div>
+         <div className="box">
+       
+     <h2>{reservations.length}</h2>
+       <h3>Reservations</h3>
+       </div>
+       </div>
+       <div className="chart-area">
+
+      <RoundChart
+        books={books}
+        members={members}
+        issued={issued}
+        fines={fines}
+        reservations={reservations}
+      />
+      
+<PopularityChart books={books} />
+    </div></div>
+   );
+   }
